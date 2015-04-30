@@ -7,7 +7,7 @@ describe Ticket do
     let(:ticket) { Ticket.new('Avengers', 'Saturday') }
 
     it "should return a number" do
-      ticket.price.should be_a(Fixnum)
+      expect(ticket.price).to be_a(Fixnum)
     end
   end
 end
