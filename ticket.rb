@@ -1,4 +1,5 @@
 class Ticket
+  attr_accessor :movie, :day, :base_price
   def initialize(movie, day)
      @movie = movie
      @day   = day
@@ -12,9 +13,17 @@ class Ticket
     @price
   end
 
-  def weekend?
+
+  def weekend? 
+    if @day == "Saturday" || @day == "Sunday"
+      weekend = true;
+    else 
+      weekend = false;
+    end
   end
 
   def new_movie?
+    ["Avengers", "Harry Potter", "Lord of the Rings", "Star Wars"].include?(@movie)
+    
   end
 end
